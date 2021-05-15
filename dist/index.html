@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="tree.js"></script>
+    <script>
+      const {
+        TreeNode,
+        TreeDrawer,
+        CanvasRender,
+        SvgRender,
+        randomTree,
+        fullBinaryTree,
+        serializer,
+        deserialize,
+        getHeight,
+      } = tree;
+    //   let t = deserialize("1,2,4,7,x,x,8,x,x,5,x,9,x,x,3,x,6,x,x");
+      let t = randomTree(15);
+
+      let svgRender = new SvgRender(document.body);
+      let drawer = new TreeDrawer(svgRender);
+      drawer.draw(t);
+    </script>
+  </body>
+</html>
